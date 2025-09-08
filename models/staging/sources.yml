@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: tpch_now
+    database: raw
+    tables:
+      - name: orders
+      - name: lineitem
+
+  - name: tpch_sf001
+    database: raw
+    tables:
+      - name: partsupp
+      - name: part
+      - name: supplier
