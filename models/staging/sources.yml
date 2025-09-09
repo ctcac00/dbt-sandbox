@@ -10,6 +10,7 @@ sources:
         error_after: { count: 2, period: day }
     tables:
       - name: orders
+        description: "This is the source data for orders"
         columns:
           - name: o_orderkey
             data_tests:
@@ -29,6 +30,7 @@ sources:
                       ]
 
       - name: lineitem
+        description: "This is the source data for line items"
         columns:
           - name: l_orderkey
             data_tests:
@@ -49,17 +51,20 @@ sources:
         error_after: { count: 2, period: day }
     tables:
       - name: partsupp
+        description: "This is the source data for part supplier"
         columns:
           - name: ps_suppkey
             data_tests:
               - not_null
       - name: part
+        description: "This is the source data for parts"
         columns:
           - name: p_partkey
             data_tests:
               - not_null
               - unique
       - name: supplier
+        description: "This is the source data for suppliers"
         columns:
           - name: s_suppkey
             data_tests:
