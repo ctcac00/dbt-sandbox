@@ -1,0 +1,1 @@
+select * from {{ ref('standard_demo', 'dim_customers') }}
